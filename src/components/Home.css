@@ -1,0 +1,10 @@
+main {
+  overflow: hidden;
+  width: 100%;
+}
+main img {
+  width: 100%;
+  filter: brightness(90%);
+  position: relative;
+  top: -150px; /* the image will now scale down as its parent gets smaller */
+}
