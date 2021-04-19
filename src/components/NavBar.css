@@ -41,7 +41,7 @@ body {
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
   display: block;
-  background-color: black;
+  background-color: white;
   cursor: pointer;
   height: 2px;
   width: 2em;
@@ -95,6 +95,12 @@ nav ul {
   text-decoration: none;
   font-weight: 00;
   color: white;
+  min-width: 430px;
+}
+
+.title:hover {
+  color: black;
+  transition: ease-in-out 750ms;
 }
 
 nav li {
@@ -107,8 +113,27 @@ nav a {
   color: white;
   font-size: 1.2rem;
   text-transform: capitalize;
+  position: relative;
   opacity: 0;
   transition: opacity 150ms ease-in-out;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  display: absolute;
+  margin-top: 0.2rem;
+  margin-left: 0;
+  padding-left: 0;
+  align-items: start;
+  position: absolute;
+}
+.dropdown-item {
+  display: none;
+}
+
+.dropdown-start:hover ul .dropdown-item {
+  display: block;
 }
 
 nav a:hover {
@@ -124,22 +149,27 @@ nav a:hover {
   transition: opacity 250ms ease-in-out 250ms;
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 991px) {
   .nav-toggle-label {
     display: none;
   }
 
   .title-buttons-container {
     display: flex;
-    justify-content: space-between;
+  }
+
+  .title {
+    font-size: 2rem;
+    text-align: start;
   }
 
   .title-container {
     margin: 1rem 0 0 5rem;
+    display: flex;
   }
 
   .button-container {
-    margin-right: 4rem;
+    margin-right: 3.5rem;
   }
 
   nav {
@@ -166,10 +196,10 @@ nav a:hover {
   nav a::before {
     content: "";
     display: block;
-    height: 3px;
-    background-color: black;
+    height: 2px;
+    background-color: white;
     position: absolute;
-    top: -0.5em;
+    top: -0.1em;
     left: 0;
     right: 0;
     transform: scale(0, 1);

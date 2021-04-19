@@ -1,6 +1,7 @@
 import React from "react";
 import NavButton from "./NavButton";
 import SocialIcons from "./SocialIcons";
+import Dropdown from "./Dropdown";
 import "./NavBar.css";
 function NavBar() {
   const socials = [
@@ -18,7 +19,7 @@ function NavBar() {
       <div className="title-buttons-container">
         <div className="title-container">
           <a href="/" className="title">
-            Forest & Light <br /> Photography
+            Forest & Light Photography
           </a>
         </div>
         <input type="checkbox" className="nav-toggle" id="nav-toggle" />
