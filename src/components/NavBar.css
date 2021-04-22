@@ -17,10 +17,16 @@ body {
 }
 
 .navbar {
+  background: transparent;
   text-align: center;
   position: fixed;
   z-index: 999;
   width: 100%;
+  transition: 200ms ease-in-out;
+}
+
+.navbar.active {
+  background: rgb(238, 176, 134);
 }
 
 .nav-toggle {
@@ -86,7 +92,13 @@ nav ul {
 
 .title-container {
   text-align: end;
-  margin-right: 1rem;
+  margin: 1rem 1rem 0 0;
+  max-width: 80%;
+}
+
+.title-buttons-container {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .title {
@@ -149,13 +161,14 @@ nav a:hover {
   transition: opacity 250ms ease-in-out 250ms;
 }
 
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 1110px) {
   .nav-toggle-label {
     display: none;
   }
 
   .title-buttons-container {
     display: flex;
+    justify-content: space-evenly;
   }
 
   .title {
@@ -174,9 +187,8 @@ nav a:hover {
 
   nav {
     all: unset;
-    grid-column: 3 / 4;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     align-items: center;
   }
 

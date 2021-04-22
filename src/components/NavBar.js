@@ -2,8 +2,10 @@ import React from "react";
 import NavButton from "./NavButton";
 import SocialIcons from "./SocialIcons";
 import Dropdown from "./Dropdown";
+import { useState } from "react";
 import "./NavBar.css";
 function NavBar() {
+  const [navbar, setNavbar] = useState(false);
   const socials = [
     {
       name: "facebook",
@@ -14,8 +16,19 @@ function NavBar() {
       link: "https://www.instagram.com/forestlightphotography/",
     },
   ];
+
+  const changeBackground = () => {
+    if (window.scrollY > window.screen.height * 0.65) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeBackground);
+
   return (
-    <div className="navbar">
+    <div className={navbar ? "navbar active" : "navbar"}>
       <div className="title-buttons-container">
         <div className="title-container">
           <a href="/" className="title">

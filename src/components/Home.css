@@ -1,34 +1,84 @@
 @import url("https://fonts.googleapis.com/css2?family=Bad+Script&display=swap");
 
 main {
+  box-sizing: border-box;
   position: relative;
-
   overflow: hidden;
   width: 100%;
   height: 100vh;
+  justify-content: center;
   text-align: center;
   object-fit: fill;
 }
 
 main img {
-  object-fit: fill;
-
+  object-fit: scale-down;
   position: absolute;
   top: -520px;
   left: -9999px;
-  right: -9930px;
+  right: -9850px;
   margin: auto;
-
   filter: brightness(80%);
 }
 
 main h1 {
-  position: absolute;
   display: inline-block;
-  min-width: 200px;
-  font-family: "Bad Script", cursive;
-  font-size: 3rem;
-  font-weight: 400;
-  left: 20vw;
-  top: 75vh;
+  width: 100%;
+  hyphens: auto;
+  position: absolute;
+  word-break: break-word;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 2rem;
+  letter-spacing: 0.25rem;
+  line-height: 1.26;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.img-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: rgb(48, 48, 48);
+}
+/* .insta-container {
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+} */
+
+.insta-image {
+  margin: 2rem 0;
+  height: 40.99vw;
+  position: relative;
+}
+footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+}
+footer p {
+  color: grey;
+  opacity: 0.5;
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+
+footer .nav-button {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.3rem;
+  margin: 1rem;
+  color: rgb(78, 78, 78);
+}
+
+@media screen and (min-width: 1110px) {
+  main h1 {
+    font-size: 3rem;
+    width: 40%;
+    top: 80%;
+  }
 }
